@@ -1,0 +1,28 @@
+RestAssured.baseURI="https://demoqa.com;
+
+String data=given().log().all().
+when().get("BookStore/v1/Books").
+then().log().all().extract().response().asString();
+
+Jsonpath js = new JsonPath(data);
+String subtitle = js.getAttribute("subTitle");
+if(subtitle.equals("A JavaScript and jQuery Developer's Guide"))
+{
+System.out.println(js.getAttribute("pages"));
+
+
+
+
+
+
+
+a4b16c36e
+
+
+
+
+
+
+
+
+

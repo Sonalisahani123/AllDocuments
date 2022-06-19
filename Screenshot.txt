@@ -1,0 +1,39 @@
+Screenshot:
+
+@After(order = 1)
+	public void tearDown(Scenario scenario) {
+		if (scenario.isFailed()) {
+			// take screenshot:
+			String screenshotName = scenario.getName().replaceAll(" ", "_");
+			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			scenario.attach(sourcePath, "image/png", screenshotName);
+
+		}
+
+
+
+
+2.TakesScreenshot ts=(TakesScreenshot)driver;
+   File ssfile=ts.getScreenshotAs(OutputType.File);
+   FileUtils.copyFile(ssfile,new File("//screenshots/screen.png")
+
+
+---------------------------------------------------------------------------
+if(Scenario.isFailed())
+{
+  String Screenshot = scenario.getName().replaceAll(" ","_");
+  TakesScreenshot ts=(TakesScreenShot)driver;
+byte[] sourcepath=ts.getScreenshotAs(OutputType.BYTES);
+Scenario.attach( sourcepath,"image/png", Screenshot) 
+
+
+TakesScreenshot ts=(TakesScreenshot)driver;
+File ssfile=ts.getScreenshotAs(OutputType.File);
+FileUtils.copyFile(ssfile,new File("//scrrenshots/screen.png")
+
+
+TakesScreenShot ts=(TakesScreenshots)driver;
+File ss=ts.getScreenshotAs(OutputType.File);
+FileUtils.copyFile(ss,new File("//screenshots/scrren.png")
+
+

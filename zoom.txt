@@ -1,0 +1,38 @@
+String s="programming"
+
+char[]ch=s.tocharArray();
+HashMap<Character,Integer> hm = new HashMap<Character, Integer>();
+ for(char c:ch)
+{
+if(hm.contains(c))
+{
+hm.put(c,hm.get(c)+1)
+}
+else{
+hm.put(c,1);
+}
+
+system.out.println(hm.get(c) + hm.getvalue());
+
+String s= quickbrownfoxjumpsoverthelazydog
+pangram
+
+boolean[] b= new boolean[26]();
+
+for(int i=0;i<=b.length;i++)
+{
+if(b[i]==a)
+{
+return true;
+
+
+
+int[] intArray = new int[20];
+
+WebDriverWait wait=new WebDriverWait(driver,Durations.Millis(20))
+wait.until(ExpectedConditions.visibilityOfElement(driver.getElement(
+
+
+
+
+

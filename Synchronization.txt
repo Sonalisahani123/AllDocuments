@@ -1,0 +1,27 @@
+Synchronization:
+1.Implicitwait: ElementNotVisibleException
+
+DriverManager.chromeDrvier().setup();
+WebDriver driver=new ChromeDriver();
+driver.get("URL");
+driver.manage().windows().maximize();
+driver.manage().timeouts().implicitlyWait(Duration.ofMillils(20));
+
+2.ExplicitWait: TimeoutException
+
+WebDriverWait wait =new WebDriverWait(driver,Duration.ofMillis(20));
+WebElement element=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'COMPOSE')]")));
+element.click();//or perform any other actions based on requirement
+
+3.Fluent Wait: ElementNotVisibleException
+
+Wait wait = new FluentWait(WebDriver reference)
+.withTimeout(timeout, SECONDS)
+.pollingEvery(timeout, SECONDS)
+.ignoring(Exception.class);
+
+WebElement foo=wait.until(new Function<WebDriver, WebElement>() {
+public WebElement applyy(WebDriver driver) {
+return driver.findElement(By.id("foo"));
+}
+});
